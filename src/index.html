@@ -14,12 +14,23 @@
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
+      <div>
+        <label for="width-input">Ancho:</label>
+        <input type="text" id="width-input" />
+        <label for="height-input">Alto:</label>
+        <input type="text" id="height-input" />
+        <button type="button" onclick="updateCardSize()">
+          Actualizar tamaño
+        </button>
+      </div>
+      <div class="container">
+        <div id="card">
+          <div id="top-left"></div>
+          <div id="value"></div>
+          <div id="bottom-right"></div>
+        </div>
+      </div>
+      <button type="button" onclick="generateCard();">Generar Carta</button>
       <div class="fixed-bottom p-4">
         Made with ❤️ by
         <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
