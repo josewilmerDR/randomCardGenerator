@@ -1,1 +1,55 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#card {
+  align-items: center;
+  width: var(--card-width, 300px);
+  height: var(--card-height, 400px);
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px;
+  display: flex;
+  /*cambio el selector float a clear*/
+  clear: both;
+  position: relative;
+}
+
+#value {
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+}
+
+#top-left,
+#bottom-right {
+  position: absolute;
+  font-size: 80px;
+}
+
+#top-left {
+  top: 0px;
+  left: 5px;
+}
+
+#bottom-right {
+  bottom: 0px;
+  right: 5px;
+}
+
+#top-left[data-suit="♥"],
+#bottom-right[data-suit="♥"],
+#top-left[data-suit="♦"],
+#bottom-right[data-suit="♦"] {
+  color: red;
+}
